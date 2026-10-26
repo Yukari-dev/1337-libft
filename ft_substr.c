@@ -6,7 +6,7 @@
 /*   By: maoulad <maoulad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 16:08:55 by maoulad           #+#    #+#             */
-/*   Updated: 2026/10/17 18:41:20 by maoulad          ###   ########.fr       */
+/*   Updated: 2026/10/21 13:53:54 by maoulad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!ret)
 		return (NULL);
 	i = 0;
-	while (s[start + i] && i < len)
+	while (i < len)
 	{
 		ret[i] = s[start + i];
 		i++;

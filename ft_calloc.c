@@ -6,7 +6,7 @@
 /*   By: maoulad <maoulad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 16:08:55 by maoulad           #+#    #+#             */
-/*   Updated: 2026/10/19 10:50:27 by maoulad          ###   ########.fr       */
+/*   Updated: 2026/10/21 14:19:09 by maoulad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,11 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t			total_size;
 	size_t			i;
 
-	if (count == 0 || size == 0)
-	{
-		count = 1;
-		size = 1;
-	}
-	if (size && count > 18446744073709551615UL / size)
+	if (size && count > SIZE_MAX / size)
 		return (NULL);
 	total_size = count * size;
+	if (total_size == 0)
+		total_size = 1;
 	ptr = malloc(total_size);
 	if (!ptr)
 		return (NULL);

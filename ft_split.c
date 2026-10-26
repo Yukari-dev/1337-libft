@@ -34,6 +34,8 @@ static size_t	countchar(char const *s, char c)
 	size_t	count;
 
 	count = 0;
+	if (c == '\0')
+		return (1);
 	while (*s)
 	{
 		while (*s && *s == c)

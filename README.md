@@ -118,10 +118,6 @@ To compile the library, clone the repository and run `make` at the root director
 ```bash
 make
 ```
-To compile the bonus (linked list) functions:
-```bash
-make bonus
-```
 To recompile everything:
 ```bash
 make re
